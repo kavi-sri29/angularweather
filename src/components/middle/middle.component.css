@@ -1,0 +1,12 @@
+.avlStyle{
+    background-color: rgb(45, 234, 15);
+    color: rgb(14, 86, 220);
+    margin-bottom: 5px;
+}
+
+.navlStyle{
+    background-color: red;
+    color: rgb(20, 18, 20);
+    margin-bottom: 5px;
+    text-decoration: line-through;
+}

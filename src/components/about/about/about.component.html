@@ -1,0 +1,22 @@
+<div>
+    This is the details from About component
+</div>
+<div>
+    Counter value from Service = {{_aboutservice.counter}}
+</div>
+<button (click)="addIncrement()">Increment the value</button>
+
+
+
+<p>Data from Parent Component</p>
+<div>
+    <tr *ngFor="let subject of subjectChild">
+    <td>{{subject.id}}</td>
+    <td>{{subject.name}}</td>
+</tr>
+</div>
+<div>
+    <input type="text" #newItem/>
+    <button (click)="addNewItem(newItem.value)">Send Data to Parent</button>
+</div>
+

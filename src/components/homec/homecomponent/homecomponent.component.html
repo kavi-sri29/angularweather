@@ -1,0 +1,42 @@
+<div>
+    <p>This is uppercase pipe</p>
+    {{value | uppercase}} This is Parent
+</div>
+<div>
+    <p>This is titlecase pipe</p>
+    {{value | titlecase}} This is Parent
+</div>
+<div>
+    <p>This is lowercase pipe</p>
+    {{value | lowercase}} This is Parent
+</div>
+<div>
+    <p>This is Date pipe</p>
+    {{valueDate | date : 'medium'}} This is Parent
+</div>
+<div>
+    <p>This is Custom pipe</p>
+    {{49 | sqrt}} 
+</div>
+<div>
+    <p>This is Shorten custom pipe</p>
+    {{'Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiih' | shorten: 10}}
+</div>
+<p>
+    Counter Value from Maths Service = {{_maths.counter}}
+</p>
+<button (click)="increase()">Increment</button>
+
+
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<hr />
+
+<app-about [subjectChild]="SubjectParent" (newItemEvent)="addItem($event)"></app-about>
+
+<hr />
+
+<app-contact [subjectChild]="SubjectParent"></app-contact>

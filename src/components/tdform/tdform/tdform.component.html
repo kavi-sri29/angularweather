@@ -1,0 +1,28 @@
+<p>tdform works!</p>
+<form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+    <div class="row">
+        <div class="row col-sm-5">
+            <div class="form-group">
+                <label for="firstname">FirstName</label>
+                <input type="text" id="firstname" ngModel name="firstname" class="form-control" required #fname="ngModel"/>
+                <span *ngIf="!fname.valid && fname.touched" style="color:red">Please Enter the Firstname</span>
+            </div>
+            <div class="form-group">
+                <label for="lastname">LastName</label>
+                <input type="text" id="lastname" ngModel name="lastname" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" ngModel name="email" required class="form-control" #emailField="ngModel"/>
+                <span *ngIf="!emailField.valid && emailField.touched" style="color: red">Please Enter the required email</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" ngModel name="password" class="form-control"/>
+            </div>
+            <div>
+                <button [disabled]="!userForm.valid">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

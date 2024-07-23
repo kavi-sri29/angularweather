@@ -1,0 +1,26 @@
+<div>
+    <p>
+        Book Id : {{bookId}}
+    </p>
+</div>
+<div>
+    <button class="btn btn-success" [disabled]="btnToggle">Toggle</button>
+</div>
+<div>
+    <button (click)="onToggle()">EventBinding</button>
+    <p>Book Status : {{bookStatus}}</p>
+</div>
+<div>
+    <input type="text" [(ngModel)]="bookName"/>
+    <p>{{bookName}}</p>
+</div>
+
+
+
+
+
+<!-- Two way binding: What changes done in html should be go to ts file and 
+from there it should change the status and reflect in html
+
+Syntax : [(ngModel)]="data"
+-->

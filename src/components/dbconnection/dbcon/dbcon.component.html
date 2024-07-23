@@ -1,0 +1,13 @@
+<p>dbcon works!</p>
+<form [formGroup]="bForm" (ngSubmit)="onSubmitItems()">
+    <div>
+        <label for="bname">Enter the Book Name:</label>
+        <input type="text" id="bname" formControlName="bname"/>
+    </div>
+    <div>
+        <label for="bauthor">Enter the Author of the Book:</label>
+        <input type="text" id="bauthor" formControlName="bauthor"/>   
+    </div>
+    <button>Submit</button>
+    
+</form>

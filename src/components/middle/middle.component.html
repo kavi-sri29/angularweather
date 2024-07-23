@@ -1,0 +1,33 @@
+<div *ngIf="books ; then books ; else newBooks">
+    Books Variable  existed
+</div>
+<ng-template #books>
+    Then conditions works fine 
+</ng-template>
+<ng-template #newBooks>
+    Books are available
+</ng-template>
+
+------------------------------------
+<hr>
+
+<!-- <div *ngFor="let item of items">
+<div [ngSwitch]="item.status">
+    <div *ngSwitchCase="'Available'" [ngStyle]="{'color':'green'}">
+        {{item.name}}
+    </div>
+    <div *ngSwitchDefault [ngStyle]="{'color':'Red'}">
+        Default - {{item.name}}
+    </div>
+
+</div>
+</div> -->
+
+
+
+<div *ngFor="let object of items">
+    <div [ngClass]="{'avlStyle': object.status=='Available', 'navlStyle':object.status=='Not Available'}">
+        {{object.name}}
+    </div>
+</div>
+
